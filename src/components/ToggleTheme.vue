@@ -31,7 +31,6 @@ export default {
 
 <style lang="scss">
 .toggle-theme {
-	padding: .8rem 1rem;
 	background-color: transparent;
 	border: 0;
 	color: var(--body-color);

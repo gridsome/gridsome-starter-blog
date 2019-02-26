@@ -1,6 +1,6 @@
 <template>
 	<div class="post-card bg-highlight">
-		<h2>Why speed matters</h2>
+		<h2 v-html="post.title" />
 		{{ post }}
 		<p>
 		  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
@@ -17,7 +17,7 @@ export default {
 
 <style lang="scss">
 .post-card {
-  margin-top: var(--space);
+  margin-bottom: var(--space);
   position: relative;
 
   &:hover {

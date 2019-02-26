@@ -12,9 +12,6 @@ body {
 
 p {
 	margin-bottom: 1.25em;
-	&:last-child {
-		margin-bottom: 0;
-	}
 }
 
 h1, h2, h3, h4, h5 {
@@ -42,3 +39,7 @@ h4 {font-size: 1.266em;}
 h5 {font-size: 1.125em;}
 
 small {font-size: 0.889em;}
+
+strong {
+  font-weight: 600;
+}

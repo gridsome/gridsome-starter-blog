@@ -1,12 +1,22 @@
 <template>
 	<Layout>
-		<div style="text-align: center">
-				<g-link to="/">Gridsome Blog Starter</g-link>
-			<h1> {{ $page.post.title }} </h1>
+		<div class="post-title">
+			<h1 class="post-title__text"> {{ $page.post.title }} </h1>
+			<p class="post-title__meta">Posted 19. February 2019. <strong>3 min</strong> read</p>
 		</div>
 		
 		<div class="post bg-highlight">
-			<div v-html="$page.post.content" />
+			<div class="post__header">
+				<!-- Add anything here -->
+			</div>
+			<div class="post__content" v-html="$page.post.content" />
+			<div class="post__footer">
+				<!-- Add anything here -->
+			</div>
+		</div>
+
+		<div class="post-comments">
+			<!-- Add comment widgets here -->
 		</div>
 
 		<Author />
@@ -32,12 +42,33 @@ query Post ($path: String!) {
 </page-query>
 
 <style lang="scss">
+.post-title {
+	padding: calc(var(--space) / 2) 0;
+	text-align: center;
+	&__meta {
+		font-size: .8em;
+	}
+}
 .post {
+
+	&__header {
+		width: calc(100% + var(--space) * 2);
+		margin-left: calc(var(--space) * -1);
+		margin-top: calc(var(--space) * -1);
+		
+		&:empty {
+			display: none;
+		}
+	}
+
 	img {
 		width: calc(100% + var(--space) * 2);
 		margin-left: calc(var(--space) * -1);
 	}
 	pre {
+		width: calc(100% + var(--space) * 2);
+		margin-left: calc(var(--space) * -1);
+		padding: calc(var(--space) / 2);
 		font-size: .85em;
 		background-color: var(--bg-code);
 		color: var(--body-color);
@@ -48,6 +79,13 @@ query Post ($path: String!) {
 		background-color: var(--bg-code)!important;
 		color: var(--body-color);
 		text-shadow: none;
+	}
+}
+
+.post-comments {
+	padding: calc(var(--space) / 2);
+	&:empty {
+		display: none;
 	}
 }
 </style>

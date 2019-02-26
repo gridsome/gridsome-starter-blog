@@ -3,22 +3,21 @@
 
     <header class="header">
       <div class="header__left">
-        <!-- add anything here --> 
+        <g-link v-if="$route.params.slug" class="logo" to="/">
+          <span class="logo__text">← Gridsome Blog Starter</span>
+        </g-link>
       </div>
       <div class="header__right">        
-        <!-- add anything here -->
         <ToggleTheme />
       </div>
     </header>
 
-    <transition name="slide-up" appear>
-      <main class="main">
-        <slot/>
-      </main>
-    </transition>
+    <main class="main">
+      <slot/>
+    </main>
 
     <footer class="footer">
-      Copyright © {{ new Date().getFullYear() }} 
+      Copyright © {{ new Date().getFullYear() }}. Powered by Gridsome
     </footer>
 
   </div>
@@ -35,35 +34,39 @@ export default {
 </script>
 
 <style lang="scss">
+.logo {
+  text-decoration: none;
+  color: var(--body-color)!important;
+  font-size: .9em;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  min-height: 60px;
+  padding: 0 calc(var(--space) / 2);
   top:0;
   z-index: 10;
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .main {
-  max-width: 760px;
+  max-width: var(--container-width);
   margin: 0 auto;
-  padding: 5vw 15px 0;
+  padding: 2vw 15px 0;
 }
 
 .footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space);
+  padding: calc(var(--space) / 2);
   text-align: center;
-}
-
-.slide-up-enter-active {
-  transition: opacity .3s, transform .5s;
-}
-
-.slide-up-enter {
-  opacity: 0;
-  transform: translateY(5px);
+  font-size: .8em;
 }
 </style>
