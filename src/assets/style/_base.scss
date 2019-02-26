@@ -1,4 +1,8 @@
 // Default
+* {
+	box-sizing: border-box;
+}
+
 body {
  	background-color: var(--bg-color);
  	color: var(--body-color);
@@ -26,4 +30,8 @@ h1,h2,h3,h4,h5,h6 {
 .bg-highlight {
 	background-color: var(--bg-highlight-color);
 	transition: background-color .5s;
+	padding: var(--space);
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 0 rgba(0,0,0,.02), 1px 1px 15px 0 rgba(0,0,0,.03);
+  transition: transform .3s, background-color .3s, box-shadow .6s;
 }

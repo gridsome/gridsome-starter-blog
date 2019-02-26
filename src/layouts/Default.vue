@@ -1,5 +1,5 @@
 <template>
-  <div id="wrapper">
+  <div id="app">
 
     <header class="header">
       <div class="header__left">
@@ -59,11 +59,11 @@ export default {
 }
 
 .slide-up-enter-active {
-  transition: opacity .6s, transform .6s;
+  transition: opacity .3s, transform .5s;
 }
 
 .slide-up-enter {
   opacity: 0;
-  transform: translateY(15px);
+  transform: translateY(5px);
 }
 </style>

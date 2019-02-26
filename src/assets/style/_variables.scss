@@ -2,15 +2,16 @@
 body {
  	--bg-color: #F3F7F9;
  	--bg-highlight-color: #FFF;
+ 	--bg-code: rgba(0,0,0,.025);
  	--body-color: #606060;
  	--title-color: #111;
  	--link-color: #222;
-  --space: 2.5em;
+  --space: 3rem;
 }
 
 @media screen and (max-width: 650px) {
 	body {
-		--space: 1.5em;
+		--space: 1.5rem;
 	}
 }
 
@@ -19,6 +20,7 @@ body {
 body[data-theme="dark"] {
  	--bg-color: #0D2538;
  	--bg-highlight-color: rgba(255, 255, 255,.05);
+ 	--bg-code: rgba(0,0,0,.3);
  	--body-color: #A7B0B6;
  	--title-color: #fff;
  	--link-color: #fff;
