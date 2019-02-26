@@ -1,0 +1,44 @@
+// Generated with https://type-scale.com/
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400, 600');
+
+html {font-size: 20px;}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+p {
+	margin-bottom: 1.25em;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 2.75rem 0 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  line-height: 1.15;
+
+  &:first-child {
+  	margin-top: 0;
+  }
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.802em;
+}
+
+h2 {font-size: 1.602em;}
+
+h3 {font-size: 1.424em;}
+
+h4 {font-size: 1.266em;}
+
+h5 {font-size: 1.125em;}
+
+small {font-size: 0.889em;}

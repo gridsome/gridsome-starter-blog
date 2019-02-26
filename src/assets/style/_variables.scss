@@ -1,0 +1,25 @@
+// Default variables
+body {
+ 	--bg-color: #F3F7F9;
+ 	--bg-highlight-color: #FFF;
+ 	--body-color: #606060;
+ 	--title-color: #111;
+ 	--link-color: #222;
+  --space: 2.5em;
+}
+
+@media screen and (max-width: 650px) {
+	body {
+		--space: 1.5em;
+	}
+}
+
+
+// Dark styles
+body[data-theme="dark"] {
+ 	--bg-color: #0D2538;
+ 	--bg-highlight-color: rgba(255, 255, 255,.05);
+ 	--body-color: #A7B0B6;
+ 	--title-color: #fff;
+ 	--link-color: #fff;
+}
