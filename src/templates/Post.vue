@@ -50,7 +50,6 @@ query Post ($path: String!) {
 </page-query>
 
 <style lang="scss">
-
 .post-title {
 	padding: calc(var(--space) / 2) 0 var(--space);
 	text-align: center;
@@ -81,6 +80,7 @@ query Post ($path: String!) {
 
 .post-comments {
 	padding: calc(var(--space) / 2);
+	
 	&:empty {
 		display: none;
 	}
