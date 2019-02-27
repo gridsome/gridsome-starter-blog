@@ -25,14 +25,12 @@ body {
 }
 
 
-// Dark styles
-.is-dark,
+// Override variables for Dark style
 body[data-theme="dark"] {
  	--bg-color: #0D2538;
  	--bg-highlight-color: #0f2d44;
  	--bg-code: rgba(0,0,0,.3);
  	--border-color:  rgba(255,255,255,.1);;
-
  	--body-color: #ced8de;
  	--title-color: #fff;
 }

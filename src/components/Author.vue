@@ -8,7 +8,7 @@
 		</h1>
 
 		<p class="author__intro">
-			A minimalistic and simple blog starter for Gridsome that uses Markdown for content.
+			A hackable, minimalistic and simple blog starter for Gridsome that uses Markdown for content.
 		</p>
 
 		<p class="author__links">
@@ -28,7 +28,7 @@ export default {
 <style lang="scss">
 .author {
 	margin: 0 auto;
-	max-width: 400px;
+	max-width: 500px;
 	text-align: center;
 	padding: calc(var(--space) / 2) 0;
 
