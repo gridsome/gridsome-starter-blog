@@ -13,6 +13,7 @@ body {
  	--border-color:  rgba(0,0,0,.1);;
   --space: 2.5rem;
   --container-width: 800px;
+  --header-height: 80px;
   --radius: 5px;
 }
 
@@ -23,6 +24,7 @@ body {
 	}
 	body {
 		--space: 1.5rem;
+		--header-height: 60px;
 	}
 }
 
@@ -35,4 +37,5 @@ body[data-theme="dark"] {
  	--border-color:  rgba(255,255,255,.1);;
  	--body-color: #ced8de;
  	--title-color: #fff;
+
 }

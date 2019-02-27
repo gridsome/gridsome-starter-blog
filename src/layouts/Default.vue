@@ -39,17 +39,11 @@ export default {
 </script>
 
 <style lang="scss">
-.logo {
-  text-decoration: none;
-  color: var(--body-color)!important;
-  font-size: .9em;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 60px;
+  min-height: var(--header-height);
   padding: 0 calc(var(--space) / 2);
   top:0;
   z-index: 10;

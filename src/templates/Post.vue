@@ -45,7 +45,7 @@ query Post ($path: String!) {
     timeToRead
     excerpt
     content
-    poster (width: 800, height: 460, blur: 10)
+    poster (width: 780, blur: 10)
   }
 }
 </page-query>

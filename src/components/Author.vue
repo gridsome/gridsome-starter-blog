@@ -8,7 +8,7 @@
 		</h1>
 
 		<p class="author__intro">
-			A hackable, minimalistic and simple blog starter for Gridsome that uses Markdown for content.
+			A modern, minimalistic and simple blog starter for Gridsome that uses Markdown for content.
 		</p>
 
 		<p class="author__links">
