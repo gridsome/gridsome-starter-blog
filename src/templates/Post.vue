@@ -5,7 +5,7 @@
 			<PostMeta :post="$page.post" />
 		</div>
 		
-		<div class="post bg-highlight">
+		<div class="post content-box">
 			<div class="post__header">
 				<!-- Add anything here. Like a featured image -->
 			</div>
@@ -69,16 +69,14 @@ query Post ($path: String!) {
 	}
 
 	pre {
-		width: calc(100% + var(--space) * 2);
-		margin-left: calc(var(--space) * -1);
 		padding: calc(var(--space) / 2);
 		font-size: .85em;
 		background-color: var(--bg-code);
 		color: var(--body-color);
 		text-shadow: none;
 		margin-bottom: 2em;
-		border-top: 1px solid rgba(0,0,0,.03);
-		border-bottom: 1px solid rgba(0,0,0,.03);
+		border: 1px solid rgba(0,0,0,.03);
+		border-radius: 5px;
 	}
 
 	code {

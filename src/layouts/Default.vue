@@ -53,6 +53,11 @@ export default {
     display: flex;
     align-items: center;
   }
+
+  @media screen and (min-width: 1200px) {
+    //Make header sticky for large screens
+    position: sticky;
+  }
 }
 
 .main {

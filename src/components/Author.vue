@@ -1,12 +1,21 @@
 <template>
 	<div class="author">
+
 		<g-image class="author__image" src="~/assets/images/author.jpg" width="240" height="240" blur="5" />
-		<h1 v-if="siteTitle" class="author__site-title">{{ siteTitle }}</h1>
-		<p class="author__intro">A minimalistic and simple blog starter for Gridsome that uses Markdown for content.</p>
-		<p class="author__links">
-			<a href="#">Twitter</a>
-			<a href="#">GitHub</a>
+
+		<h1 v-if="siteTitle" class="author__site-title">
+			{{ siteTitle }}
+		</h1>
+
+		<p class="author__intro">
+			A minimalistic and simple blog starter for Gridsome that uses Markdown for content.
 		</p>
+
+		<p class="author__links">
+			<a href="//twitter.com/gridsome">Twitter</a>
+			<a href="//github.com/gridsome/gridsome">GitHub</a>
+		</p>
+
 	</div>
 </template>
 

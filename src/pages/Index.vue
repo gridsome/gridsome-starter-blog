@@ -1,7 +1,7 @@
 <template>
   <Layout>
     
-    <Author site-title="Gridome Blog Starter" />
+    <Author :site-title="$static.metaData.siteName" />
     
     <div class="posts">
       <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
@@ -9,6 +9,14 @@
 
   </Layout>
 </template>
+
+<static-query>
+query {
+  metaData {
+    siteName
+  }
+}
+</static-query>
 
 <page-query>
 {

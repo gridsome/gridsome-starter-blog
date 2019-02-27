@@ -1,5 +1,5 @@
 <template>
-	<div class="post-card bg-highlight">
+	<div class="post-card content-box">
 		<h2 v-html="post.title" />
 		<p v-html="post.excerpt" />
     <PostMeta :post="post" />
