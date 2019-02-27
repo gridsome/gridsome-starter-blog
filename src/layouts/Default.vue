@@ -54,16 +54,16 @@ export default {
     align-items: center;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1300px) {
     //Make header sticky for large screens
     position: sticky;
+    width: 100%;
   }
 }
 
 .main {
-  max-width: var(--container-width);
   margin: 0 auto;
-  padding: 2.5vw 15px 0;
+  padding: 1.5vw 15px 0;
 }
 
 .footer {
