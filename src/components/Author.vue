@@ -1,14 +1,14 @@
 <template>
 	<div class="author">
 
-		<g-image class="author__image" src="~/assets/images/author.jpg" width="240" height="240" blur="5" />
+		<g-image class="author__image" src="~/assets/images/author.jpg" width="180" height="180" blur="5" />
 
 		<h1 v-if="siteTitle" class="author__site-title">
 			{{ siteTitle }}
 		</h1>
 
 		<p class="author__intro">
-			A modern, minimalistic and simple blog starter for Gridsome that uses Markdown for content.
+			A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.
 		</p>
 
 		<p class="author__links">
@@ -34,8 +34,8 @@ export default {
 
 	&__image {
 		border-radius: 100%;
-		width: 120px;
-		height: 120px;
+		width: 90px;
+		height: 90px;
 		margin-bottom: 1em;
 	}
 
