@@ -9,6 +9,7 @@
 			<div class="post__header">
 				<!-- Add anything here. Like a featured image -->
 			</div>
+			<p v-if="$page.post.excerpt" class="post__excerpt" v-html="$page.post.excerpt" />
 			<div class="post__content" v-html="$page.post.content" />
 			<div class="post__footer">
 				<!-- Add anything here -->
@@ -38,7 +39,11 @@ export default {
 <page-query>
 query Post ($path: String!) {
   post: post (path: $path) {
-    title
+   	title
+    path
+    date (format: "D. MMMM YYYY")
+    timeToRead
+    excerpt
     content
   }
 }
@@ -63,26 +68,14 @@ query Post ($path: String!) {
 		}
 	}
 
+	&__excerpt {
+		font-size: 1.2em;
+		color: var(--title-color);
+	}
+
 	img {
 		width: calc(100% + var(--space) * 2);
 		margin-left: calc(var(--space) * -1);
-	}
-
-	pre {
-		padding: calc(var(--space) / 2);
-		font-size: .85em;
-		background-color: var(--bg-code);
-		color: var(--body-color);
-		text-shadow: none;
-		margin-bottom: 2em;
-		border: 1px solid rgba(0,0,0,.03);
-		border-radius: 5px;
-	}
-
-	code {
-		background-color: var(--bg-code)!important;
-		color: var(--body-color);
-		text-shadow: none;
 	}
 }
 

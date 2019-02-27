@@ -1,5 +1,10 @@
 <template>
-	 <div class="post-meta">Posted 19. February 2019. <strong>3 min</strong> read</div>
+	 <div class="post-meta">
+      Posted {{ post.date }}.
+      <template v-if="post.timeToRead">
+        <strong>{{ post.timeToRead }} min read</strong>
+      </template>
+	 	</div>
 </template>
 
 <script>

@@ -41,3 +41,13 @@ small {font-size: 0.889em;}
 strong {
   font-weight: 600;
 }
+
+blockquote {
+  border-left: 4px solid var(--border-color);
+  padding-left: calc(var(--space) / 2);
+  color: var(--title-color);
+}
+
+em {
+  font-style: italic;
+}

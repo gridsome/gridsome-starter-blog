@@ -17,7 +17,7 @@
     </main>
 
     <footer class="footer">
-      Copyright © {{ new Date().getFullYear() }}. Powered by Gridsome
+      Copyright © {{ new Date().getFullYear() }}. Powered by <a href="//gridsome.org"> Gridsome </a>
     </footer>
 
   </div>
@@ -48,6 +48,7 @@ export default {
   padding: 0 calc(var(--space) / 2);
   top:0;
   z-index: 10;
+
   &__left,
   &__right {
     display: flex;
@@ -63,7 +64,7 @@ export default {
 .main {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 2vw 15px 0;
+  padding: 3.33vw 15px 0;
 }
 
 .footer {
