@@ -8,7 +8,7 @@
 body {
  	background-color: var(--bg-color);
  	color: var(--body-color);
- 	transition: color 1s, background-color .5s;
+ 	transition: color .6s, background-color .6s;
  	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   margin:0;
   padding:0;
@@ -17,21 +17,20 @@ body {
 
 a:not(.button) {
 	color: var(--link-color);
- 	transition: color 1s;
-
+ 	transition: color .6s;
 	&:hover {
 		opacity: .8;
 	}
 }
 
 h1,h2,h3,h4,h5,h6 {
-	transition: color 1s;
+	transition: color .6s;
 	color: var(--title-color);
 }
 
 .bg-highlight {
 	background-color: var(--bg-highlight-color);
-	transition: background-color .5s;
+	transition: background-color .6s;
 	padding: var(--space);
   border-radius: 5px;
   box-shadow: 1px 1px 5px 0 rgba(0,0,0,.02), 1px 1px 15px 0 rgba(0,0,0,.03);

@@ -1,16 +1,18 @@
 <template>
 	<div class="post-card bg-highlight">
 		<h2 v-html="post.title" />
-		{{ post }}
-		<p>
-		  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-		</p>
+		<p v-html="post.excerpt" />
+    <PostMeta :post="post" />
 		<g-link class="post-card__link" :to="post.path">Link</g-link>
 	</div>
 </template>
 
 <script>
+import PostMeta from '~/components/PostMeta'
 export default {
+  components: {
+    PostMeta
+  },
 	props: ['post'],
 }
 </script>

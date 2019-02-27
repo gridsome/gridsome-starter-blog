@@ -2,12 +2,12 @@
 	<Layout>
 		<div class="post-title">
 			<h1 class="post-title__text"> {{ $page.post.title }} </h1>
-			<p class="post-title__meta">Posted 19. February 2019. <strong>3 min</strong> read</p>
+			<PostMeta :post="$page.post" />
 		</div>
 		
 		<div class="post bg-highlight">
 			<div class="post__header">
-				<!-- Add anything here -->
+				<!-- Add anything here. Like a featured image -->
 			</div>
 			<div class="post__content" v-html="$page.post.content" />
 			<div class="post__footer">
@@ -24,10 +24,13 @@
 </template>
 
 <script>
+import PostMeta from '~/components/PostMeta'
 import Author from '~/components/Author.vue'
+
 export default {
 	components: {
-		Author
+		Author,
+		PostMeta
 	}
 }
 </script>
@@ -42,13 +45,12 @@ query Post ($path: String!) {
 </page-query>
 
 <style lang="scss">
+
 .post-title {
 	padding: calc(var(--space) / 2) 0;
 	text-align: center;
-	&__meta {
-		font-size: .8em;
-	}
 }
+
 .post {
 
 	&__header {
@@ -65,6 +67,7 @@ query Post ($path: String!) {
 		width: calc(100% + var(--space) * 2);
 		margin-left: calc(var(--space) * -1);
 	}
+
 	pre {
 		width: calc(100% + var(--space) * 2);
 		margin-left: calc(var(--space) * -1);
@@ -74,7 +77,10 @@ query Post ($path: String!) {
 		color: var(--body-color);
 		text-shadow: none;
 		margin-bottom: 2em;
+		border-top: 1px solid rgba(0,0,0,.03);
+		border-bottom: 1px solid rgba(0,0,0,.03);
 	}
+
 	code {
 		background-color: var(--bg-code)!important;
 		color: var(--body-color);

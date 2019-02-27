@@ -4,7 +4,7 @@
     <header class="header">
       <div class="header__left">
         <g-link v-if="$route.params.slug" class="logo" to="/">
-          <span class="logo__text">← Gridsome Blog Starter</span>
+          <span class="logo__text">Gridsome Blog Starter</span>
         </g-link>
       </div>
       <div class="header__right">        

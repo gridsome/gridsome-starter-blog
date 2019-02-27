@@ -1,8 +1,12 @@
 <template>
 	<div class="author">
 		<g-image class="author__image" src="~/assets/images/author.jpg" width="240" height="240" blur="5" />
-		<h1 v-if="siteTitle" class="author__siteTitle">{{ siteTitle }}</h1>
+		<h1 v-if="siteTitle" class="author__site-title">{{ siteTitle }}</h1>
 		<p class="author__intro">A minimalistic and simple blog starter for Gridsome that uses Markdown for content.</p>
+		<p class="author__links">
+			<a href="#">Twitter</a>
+			<a href="#">GitHub</a>
+		</p>
 	</div>
 </template>
 
@@ -30,8 +34,15 @@ export default {
 		opacity: .8;
 	}
 
-	&__siteTitle {
+	&__site-title {
 		font-size: 1.5em;
+	}
+
+	&__links {
+		margin-top: -.5em;
+		a {
+			margin: 0 .5em;
+		}
 	}
 }
 </style>
