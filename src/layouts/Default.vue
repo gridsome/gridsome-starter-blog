@@ -3,7 +3,8 @@
 
     <header class="header">
       <div class="header__left">
-        <g-link v-if="$route.params.slug" class="logo" to="/">
+
+        <g-link v-if="showLogo" class="logo" to="/">
           <span class="logo__text">
             {{ $static.metaData.siteName }}
           </span>
@@ -38,6 +39,9 @@ query {
 import ToggleTheme from '~/components/ToggleTheme.vue'
 
 export default {
+  props: {
+    showLogo: { default: true }
+  },
   components: {
     ToggleTheme
   }

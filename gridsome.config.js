@@ -24,7 +24,15 @@ module.exports = {
       options: {
         path: 'content/posts/*.md',
         typeName: 'Post',
-        route: '/:slug'
+        route: '/:slug',
+        refs: {
+          // Creates tags from 'tags' in Markdown files
+          tags: {
+            typeName: 'Tag',
+            route: '/tag/:id',
+            create: true
+          }
+        }
       }
     }
   ]

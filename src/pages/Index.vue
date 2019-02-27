@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout :show-logo="false">
     
     <Author :site-title="$static.metaData.siteName" />
     
