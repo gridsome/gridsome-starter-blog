@@ -63,7 +63,7 @@ export default {
 .main {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 3.33vw 15px 0;
+  padding: 2.5vw 15px 0;
 }
 
 .footer {

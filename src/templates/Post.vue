@@ -45,14 +45,14 @@ query Post ($path: String!) {
     timeToRead
     excerpt
     content
-    poster (width: 780, blur: 10)
+    poster (width: 860, blur: 10)
   }
 }
 </page-query>
 
 <style lang="scss">
 .post-title {
-	padding: calc(var(--space) / 2) 0 var(--space);
+	padding: calc(var(--space) / 2) 0 calc(var(--space) / 2);
 	text-align: center;
 }
 
@@ -65,7 +65,9 @@ query Post ($path: String!) {
 		margin-bottom: calc(var(--space) / 2);
 		overflow: hidden;
 		border-radius: var(--radius) var(--radius) 0 0;
-		
+		img {
+			width: 100%;
+		}
 		&:empty {
 			display: none;
 		}
