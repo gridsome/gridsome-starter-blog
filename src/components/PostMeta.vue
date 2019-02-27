@@ -2,7 +2,7 @@
 	 <div class="post-meta">
       Posted {{ post.date }}.
       <template v-if="post.timeToRead">
-        <strong>{{ post.timeToRead }} min read</strong>
+        <strong>{{ post.timeToRead }} min read.</strong>
       </template>
 	 	</div>
 </template>
@@ -16,5 +16,6 @@ export default {
 <style lang="scss">
 .post-meta {
 	font-size: .8em;
+	opacity: .7;
 }
 </style>

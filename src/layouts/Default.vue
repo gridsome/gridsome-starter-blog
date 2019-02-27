@@ -74,5 +74,10 @@ export default {
   padding: calc(var(--space) / 2);
   text-align: center;
   font-size: .8em;
+
+  a {
+    color: currentColor;
+    margin: 0 .35em;
+  }
 }
 </style>
