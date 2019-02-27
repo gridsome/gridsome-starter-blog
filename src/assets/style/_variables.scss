@@ -13,8 +13,10 @@ body {
  	--border-color:  rgba(0,0,0,.1);;
   --space: 2.5rem;
   --container-width: 800px;
+  --radius: 5px;
 }
 
+// Make  things smaller for mobile
 @media screen and (max-width: 650px) {
 	html {
 		--base-font-size: 17px;
@@ -25,7 +27,7 @@ body {
 }
 
 
-// Override variables for Dark style
+// Override variables for Dark theme
 body[data-theme="dark"] {
  	--bg-color: #0D2538;
  	--bg-highlight-color: #0f2d44;

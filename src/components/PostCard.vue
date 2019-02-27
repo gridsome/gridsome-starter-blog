@@ -1,12 +1,14 @@
 <template>
-	<div class="post-card content-box">
+	<div class="post-card content-box" :class="{'post-card--has-poster' : post.poster}">
     <div class="post-card__header">
-      <!-- Add anything here. Like a featured image -->
+      <g-image v-if="post.poster" class="post-card__image" :src="post.poster" />
     </div>
-		<h2 class="post-card__title" v-html="post.title" />
-		<p class="post-card__excerpt" v-html="post.excerpt" />
-    <PostMeta class="post-card__meta" :post="post" />
-		<g-link class="post-card__link" :to="post.path">Link</g-link>
+    <div class="post-card__content">
+      <h2 class="post-card__title" v-html="post.title" />
+      <p class="post-card__excerpt" v-html="post.excerpt" />
+      <PostMeta class="post-card__meta" :post="post" />
+      <g-link class="post-card__link" :to="post.path">Link</g-link>
+    </div>
 	</div>
 </template>
 
@@ -26,14 +28,20 @@ export default {
   position: relative;
 
   &__header {
-    width: calc(100% + var(--space) * 2);
     margin-left: calc(var(--space) * -1);
-    margin-top: calc(var(--space) * -1);
+    margin-right: calc(var(--space) * -1);
     margin-bottom: calc(var(--space) / 2);
-    
+    margin-top: calc(var(--space) * -1);
+    overflow: hidden;
+    border-radius: var(--radius) var(--radius) 0 0;
+
     &:empty {
       display: none;
     }
+  }
+
+  &__image {
+    min-width: 100%;
   }
 
   &__title {

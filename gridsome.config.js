@@ -6,20 +6,10 @@
 
 module.exports = {
   siteName: 'Gridsome Blog Starter',
-   
-  transformers: {
-    remark: {
-      externalLinksTarget: '_blank',
-      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-      anchorClassName: 'icon icon-link',
-      plugins: [
-        '@gridsome/remark-prismjs'
-      ]
-    }
-  },
 
   plugins: [
    	{
+      // Create posts from markdown files
       use: '@gridsome/source-filesystem',
       options: {
         path: 'content/posts/*.md',
@@ -35,5 +25,17 @@ module.exports = {
         }
       }
     }
-  ]
+  ],
+
+  transformers: {
+    //Add markdown support to all file-system sources
+    remark: {
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      anchorClassName: 'icon icon-link',
+      plugins: [
+        '@gridsome/remark-prismjs'
+      ]
+    }
+  },
 }

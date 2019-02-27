@@ -23,6 +23,10 @@ a:not(.button) {
 	}
 }
 
+img {
+	max-width: 100%;
+}
+
 h1,h2,h3,h4,h5,h6 {
 	transition: color .6s;
 	color: var(--title-color);

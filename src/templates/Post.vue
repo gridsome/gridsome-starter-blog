@@ -7,7 +7,7 @@
 		
 		<div class="post content-box">
 			<div class="post__header">
-				<!-- Add anything here. Like a featured image -->
+				<g-image v-if="$page.post.poster" :src="$page.post.poster" />
 			</div>
 			<p v-if="$page.post.excerpt" class="post__excerpt" v-html="$page.post.excerpt" />
 			<div class="post__content" v-html="$page.post.content" />
@@ -45,6 +45,7 @@ query Post ($path: String!) {
     timeToRead
     excerpt
     content
+    poster (width: 800, height: 460, blur: 10)
   }
 }
 </page-query>
@@ -61,6 +62,9 @@ query Post ($path: String!) {
 		width: calc(100% + var(--space) * 2);
 		margin-left: calc(var(--space) * -1);
 		margin-top: calc(var(--space) * -1);
+		margin-bottom: calc(var(--space) / 2);
+		overflow: hidden;
+		border-radius: var(--radius) var(--radius) 0 0;
 		
 		&:empty {
 			display: none;
@@ -72,9 +76,12 @@ query Post ($path: String!) {
 		color: var(--title-color);
 	}
 
-	img {
-		width: calc(100% + var(--space) * 2);
-		margin-left: calc(var(--space) * -1);
+	&__content {
+		img {
+			width: calc(100% + var(--space) * 2);
+			margin-left: calc(var(--space) * -1);
+			display: block;
+		}
 	}
 }
 

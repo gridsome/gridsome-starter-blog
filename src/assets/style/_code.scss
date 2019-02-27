@@ -12,7 +12,7 @@ pre {
   background-color: var(--bg-code);
   margin-bottom: var(--space);
   border: 1px solid var(--border-color);
-  border-radius: 5px;
+  border-radius: var(--radius);
 }
 
 code {
@@ -57,7 +57,7 @@ pre[class*="language-"] {
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-	border-radius: .3em;
+	border-radius: var(--radius);
 	white-space: normal;
 }
 

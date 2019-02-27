@@ -1,6 +1,5 @@
 <template>
   <Layout :show-logo="false">
-    
     <!-- Author intro -->
     <Author :site-title="$static.metaData.siteName" />
     
@@ -31,6 +30,7 @@ query {
         date (format: "D. MMMM YYYY")
         timeToRead
         excerpt
+        poster (width: 770, height: 380, blur: 10)
       }
     }
   }
@@ -51,8 +51,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-
-</style>
-
