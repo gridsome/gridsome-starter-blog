@@ -20,7 +20,7 @@
 			<!-- Add comment widgets here -->
 		</div>
 
-		<Author />
+		<Author class="post-author" />
 	</Layout>
 </template>
 
@@ -52,7 +52,7 @@ query Post ($path: String!) {
 <style lang="scss">
 
 .post-title {
-	padding: calc(var(--space) / 2) 0;
+	padding: calc(var(--space) / 2) 0 var(--space);
 	text-align: center;
 }
 
@@ -84,5 +84,9 @@ query Post ($path: String!) {
 	&:empty {
 		display: none;
 	}
+}
+
+.post-author {
+	margin-top: calc(var(--space) / 2);
 }
 </style>

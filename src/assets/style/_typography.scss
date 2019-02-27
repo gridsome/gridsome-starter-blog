@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400, 600');
 
-html {font-size: 20px;}
+html {
+  font-size: var(--base-font-size);
+}
 
 body {
   font-family: 'Poppins', sans-serif;

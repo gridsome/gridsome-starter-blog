@@ -1,4 +1,8 @@
 // Default variables
+html {
+	--base-font-size: 20px;
+}
+
 body {
  	--bg-color: #F3F7F9;
  	--bg-highlight-color: #FFF;
@@ -12,6 +16,9 @@ body {
 }
 
 @media screen and (max-width: 650px) {
+	html {
+		--base-font-size: 17px;
+	}
 	body {
 		--space: 1.5rem;
 	}
