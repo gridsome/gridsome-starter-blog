@@ -10,9 +10,8 @@
     
     <div class="post content-box">
       <div class="post__header">
-        <g-image v-if="$page.post.poster" :src="$page.post.poster" />
+        <g-image v-if="$page.post.coverImage" :src="$page.post.coverImage" />
       </div>
-      <p v-if="$page.post.excerpt" class="post__excerpt" v-html="$page.post.excerpt" />
       <div class="post__content" v-html="$page.post.content" />
       <div class="post__footer">
         <!-- Add anything here -->
@@ -46,9 +45,9 @@ query Post ($path: String!) {
     path
     date (format: "D. MMMM YYYY")
     timeToRead
-    excerpt
+    description
     content
-    poster (width: 860, blur: 10)
+    coverImage (width: 860, blur: 10)
   }
 }
 </page-query>

@@ -1,11 +1,11 @@
 <template>
   <div class="post-card content-box" :class="{'post-card--has-poster' : post.poster}">
     <div class="post-card__header">
-      <g-image v-if="post.poster" class="post-card__image" :src="post.poster" />
+      <g-image v-if="post.coverImage" class="post-card__image" :src="post.coverImage" />
     </div>
     <div class="post-card__content">
       <h2 class="post-card__title" v-html="post.title" />
-      <p class="post-card__excerpt" v-html="post.excerpt" />
+      <p class="post-card__description" v-html="post.description" />
       <PostMeta class="post-card__meta" :post="post" />
       <g-link class="post-card__link" :to="post.path">Link</g-link>
     </div>
