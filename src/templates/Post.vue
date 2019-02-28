@@ -6,15 +6,18 @@
       </h1>
       
       <PostMeta :post="$page.post" />
+
     </div>
     
     <div class="post content-box">
       <div class="post__header">
         <g-image v-if="$page.post.coverImage" :src="$page.post.coverImage" />
       </div>
+
       <div class="post__content" v-html="$page.post.content" />
+
       <div class="post__footer">
-        <!-- Add anything here -->
+        <PostTags :post="$page.post" />
       </div>
     </div>
 
@@ -28,12 +31,14 @@
 
 <script>
 import PostMeta from '~/components/PostMeta'
+import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
 
 export default {
   components: {
     Author,
-    PostMeta
+    PostMeta,
+    PostTags
   }
 }
 </script>
@@ -45,6 +50,11 @@ query Post ($path: String!) {
     path
     date (format: "D. MMMM YYYY")
     timeToRead
+    tags {
+      id
+      title
+      path
+    }
     description
     content
     coverImage (width: 860, blur: 10)

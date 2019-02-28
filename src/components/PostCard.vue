@@ -6,7 +6,10 @@
     <div class="post-card__content">
       <h2 class="post-card__title" v-html="post.title" />
       <p class="post-card__description" v-html="post.description" />
+      
       <PostMeta class="post-card__meta" :post="post" />
+      <PostTags class="post-card__tags" :post="post" />
+
       <g-link class="post-card__link" :to="post.path">Link</g-link>
     </div>
   </div>
@@ -14,9 +17,12 @@
 
 <script>
 import PostMeta from '~/components/PostMeta'
+import PostTags from '~/components/PostTags'
+
 export default {
   components: {
-    PostMeta
+    PostMeta,
+    PostTags
   },
   props: ['post'],
 }
@@ -51,6 +57,11 @@ export default {
   &:hover {
     transform: translateY(-5px);
     box-shadow: 1px 10px 30px 0 rgba(0,0,0,.1);
+  }
+
+  &__tags {
+    z-index: 1;
+    position: relative;
   }
 
   &__link {
