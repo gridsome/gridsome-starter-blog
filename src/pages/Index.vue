@@ -1,7 +1,7 @@
 <template>
   <Layout :show-logo="false">
     <!-- Author intro -->
-    <Author :site-title="$static.metaData.siteName" />
+    <Author :show-title="true" />
     
     <!-- List posts -->
     <div class="posts">
@@ -10,14 +10,6 @@
 
   </Layout>
 </template>
-
-<static-query>
-query {
-  metaData {
-    siteName
-  }
-}
-</static-query>
 
 <page-query>
 {

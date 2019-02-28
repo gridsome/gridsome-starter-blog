@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: 'Gridsome Blog Starter',
+  siteDescription: 'A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.',
 
   plugins: [
     {

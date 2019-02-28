@@ -3,8 +3,8 @@
 
 		<g-image class="author__image" src="~/assets/images/author.jpg" width="180" height="180" blur="5" />
 
-		<h1 v-if="siteTitle" class="author__site-title">
-			{{ siteTitle }}
+		<h1 v-if="showTitle" class="author__site-title">
+			{{ $static.metaData.siteName }}
 		</h1>
 
 		<p class="author__intro">
@@ -19,9 +19,17 @@
 	</div>
 </template>
 
+<static-query>
+query {
+  metaData {
+    siteName
+  }
+}
+</static-query>
+
 <script>
 export default {
-	props: ['siteTitle']
+	props: ['showTitle']
 }
 </script>
 
