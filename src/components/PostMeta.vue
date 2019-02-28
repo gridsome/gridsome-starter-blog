@@ -1,21 +1,21 @@
 <template>
-	 <div class="post-meta">
+   <div class="post-meta">
       Posted {{ post.date }}.
       <template v-if="post.timeToRead">
         <strong>{{ post.timeToRead }} min read.</strong>
       </template>
-	 	</div>
+    </div>
 </template>
 
 <script>
 export default {
-	props: ['post']
+  props: ['post']
 }
 </script>
 
 <style lang="scss">
 .post-meta {
-	font-size: .8em;
-	opacity: .7;
+  font-size: .8em;
+  opacity: .7;
 }
 </style>

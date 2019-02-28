@@ -1,7 +1,5 @@
 <template>
 	<g-link class="logo" to="/">
-		<g-image class="logo__image" src="~/assets/images/author.jpg" width="80" height="80" blur="5" />
-
 	  <span class="logo__text">
 	    {{ $static.metaData.siteName }}
 	  </span>

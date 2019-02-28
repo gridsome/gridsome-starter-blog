@@ -1,5 +1,5 @@
 <template>
-	<div class="post-card content-box" :class="{'post-card--has-poster' : post.poster}">
+  <div class="post-card content-box" :class="{'post-card--has-poster' : post.poster}">
     <div class="post-card__header">
       <g-image v-if="post.poster" class="post-card__image" :src="post.poster" />
     </div>
@@ -9,7 +9,7 @@
       <PostMeta class="post-card__meta" :post="post" />
       <g-link class="post-card__link" :to="post.path">Link</g-link>
     </div>
-	</div>
+  </div>
 </template>
 
 <script>
@@ -18,7 +18,7 @@ export default {
   components: {
     PostMeta
   },
-	props: ['post'],
+  props: ['post'],
 }
 </script>
 
@@ -49,8 +49,8 @@ export default {
   }
 
   &:hover {
-  	transform: translateY(-5px);
-  	box-shadow: 1px 10px 30px 0 rgba(0,0,0,.1);
+    transform: translateY(-5px);
+    box-shadow: 1px 10px 30px 0 rgba(0,0,0,.1);
   }
 
   &__link {
