@@ -17,8 +17,8 @@ export default {
   margin: 1em 0 0;
 
   &__link {
-  	margin-right: .5em;
-  	font-size: .8rem;
+  	margin-right: .75em;
+  	font-size: .75rem;
   	color: currentColor;
   	text-decoration: none;
   	background-color: var(--bg-color);
