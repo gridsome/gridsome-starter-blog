@@ -8,7 +8,7 @@ module.exports = {
   siteName: 'Gridsome Blog Starter',
 
   plugins: [
-   	{
+    {
       // Create posts from markdown files
       use: '@gridsome/source-filesystem',
       options: {
