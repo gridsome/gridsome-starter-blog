@@ -12,11 +12,11 @@ module.exports = {
       // Create posts from markdown files
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'content/posts/*.md',
         typeName: 'Post',
+        path: 'content/posts/*.md',
         route: '/:slug',
         refs: {
-          // Creates tags from 'tags' in Markdown files
+          // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
           tags: {
             typeName: 'Tag',
             route: '/tag/:id',
