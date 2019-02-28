@@ -77,9 +77,11 @@ query Post ($path: String!) {
     margin-bottom: calc(var(--space) / 2);
     overflow: hidden;
     border-radius: var(--radius) var(--radius) 0 0;
+    
     img {
       width: 100%;
     }
+
     &:empty {
       display: none;
     }
@@ -94,10 +96,12 @@ query Post ($path: String!) {
       font-size: 1.2em;
       color: var(--title-color);
     }
+
     img {
       width: calc(100% + var(--space) * 2);
       margin-left: calc(var(--space) * -1);
       display: block;
+      max-width: none;
     }
   }
 }
