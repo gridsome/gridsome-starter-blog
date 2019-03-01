@@ -2,7 +2,7 @@
 
 > A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.
 
-### Features
+## Features
 - Beautiful and simple design.
 - Markdown for content.
 - Taxonomy support for Tags.
@@ -10,13 +10,13 @@
 - 100, 100, 100, 100 score on Google Lighthouse.
 - Uses same front-matter fields as Dev.to.
 
-### Install
+## Install
 
-#### 1. Install Gridsome CLI tool if you don't have
+### 1. Install Gridsome CLI tool if you don't have
 
 `npm install --global @gridsome/cli`
 
-#### 2. Install this starter
+### 2. Install this starter
 
 1. `gridsome create my-gridsome-site https://github.com/gridsome/gridsome-starter-blog.git`
 2. `cd my-gridsome-site` to open folder
