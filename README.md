@@ -5,7 +5,7 @@
 ## Features
 - Beautiful and simple design.
 - Markdown for content.
-- Taxonomy support for Tags.
+- Tags support.
 - Dark / Light toggle.
 - 100, 100, 100, 100 score on Google Lighthouse.
 - Uses same front-matter fields as Dev.to.
