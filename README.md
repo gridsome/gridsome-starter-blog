@@ -10,6 +10,10 @@
 - 100, 100, 100, 100 score on Google Lighthouse.
 - Uses same front-matter fields as Dev.to.
 
+## Demo URL
+
+https://gridsome-starter-blog.netlify.com
+
 ## Install
 
 ### 1. Install Gridsome CLI tool if you don't have
