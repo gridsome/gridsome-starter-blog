@@ -1,14 +1,15 @@
 <template>
   <Layout>
+    <read-progress></read-progress>
     <div class="post-title">
       <h1 class="post-title__text">
         {{ $page.post.title }}
       </h1>
-      
+
       <PostMeta :post="$page.post" />
 
     </div>
-    
+
     <div class="post content-box">
       <div class="post__header">
         <g-image alt="Cover image" v-if="$page.post.coverImage" :src="$page.post.coverImage" />
@@ -33,12 +34,14 @@
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
+import ReadProgress from "vue-read-progress";
 
 export default {
   components: {
     Author,
     PostMeta,
-    PostTags
+    PostTags,
+    ReadProgress
   },
   metaInfo () {
     return {
@@ -88,7 +91,7 @@ query Post ($path: String!) {
     margin-bottom: calc(var(--space) / 2);
     overflow: hidden;
     border-radius: var(--radius) var(--radius) 0 0;
-    
+
     img {
       width: 100%;
     }
@@ -119,7 +122,7 @@ query Post ($path: String!) {
 
 .post-comments {
   padding: calc(var(--space) / 2);
-  
+
   &:empty {
     display: none;
   }
