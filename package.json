@@ -12,7 +12,7 @@
     "@gridsome/source-filesystem": "^0.3.0",
     "@gridsome/transformer-remark": "^0.2.0",
     "gridsome": "^0.5.0",
-    "vue-read-progress": "^1.0.3"
+    "vue-read-progress": "^1.0.4"
   },
   "devDependencies": {
     "node-sass": "^4.11.0",
