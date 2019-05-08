@@ -1,6 +1,8 @@
 <template>
   <Layout>
-    <read-progress></read-progress>
+    <ClientOnly>
+      <read-progress></read-progress>
+    </ClientOnly>
     <div class="post-title">
       <h1 class="post-title__text">
         {{ $page.post.title }}
@@ -34,14 +36,16 @@
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
-import ReadProgress from "vue-read-progress";
 
 export default {
   components: {
     Author,
     PostMeta,
     PostTags,
-    ReadProgress
+    ReadProgress: () =>
+        import ('vue-read-progress')
+        .then(m => m.default)
+        .catch()
   },
   metaInfo () {
     return {
