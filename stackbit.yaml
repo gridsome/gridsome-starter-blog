@@ -1,0 +1,41 @@
+stackbitVersion: ~0.2.0
+ssgName: custom
+buildCommand: npm run build
+publishDir: dist
+staticDir: static
+uploadDir: images
+pagesDir: content
+models:
+  post:
+    type: page
+    label: Post
+    folder: posts
+    fields:
+      - name: title
+        type: string
+        label: Title
+        required: true
+      - name: date
+        type: date
+        label: Date
+        required: true
+      - name: published
+        type: boolean
+        label: Published
+      - name: tags
+        type: list
+        label: Tags
+        items:
+          type: string
+      - name: series
+        type: boolean
+        label: Series
+      - name: canonical_url
+        type: boolean
+        label: Canonical URL
+      - name: cover_image
+        type: image
+        label: Cover Image
+      - name: description
+        type: text
+        label: Description

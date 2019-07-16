@@ -2,6 +2,10 @@
 
 > A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.
 
+## Create with Stackbit
+
+[![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/stackbithq/gridsome-starter-blog)
+
 ## Features
 - Beautiful and simple design.
 - Markdown for content.
