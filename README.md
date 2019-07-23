@@ -4,7 +4,7 @@
 
 ## Create with Stackbit
 
-[![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/stackbithq/gridsome-starter-blog)
+[![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/gridsome/gridsome-starter-blog)
 
 ## Features
 - Beautiful and simple design.
