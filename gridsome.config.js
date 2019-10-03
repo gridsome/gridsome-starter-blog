@@ -1,4 +1,4 @@
-// This is where project configuration and plugin options are located. 
+// This is where project configuration and plugin options are located.
 // Learn more: https://gridsome.org/docs/config
 
 // Changes here requires a server restart.
@@ -8,6 +8,11 @@ module.exports = {
   siteName: 'Gridsome Blog Starter',
   siteDescription: 'A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.',
 
+  templates: {
+    Post: '/:title',
+    Tag: '/tag/:id'
+  },
+
   plugins: [
     {
       // Create posts from markdown files
@@ -15,12 +20,10 @@ module.exports = {
       options: {
         typeName: 'Post',
         path: 'content/posts/*.md',
-        route: '/:slug',
         refs: {
           // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
           tags: {
             typeName: 'Tag',
-            route: '/tag/:id',
             create: true
           }
         }
@@ -38,5 +41,5 @@ module.exports = {
         '@gridsome/remark-prismjs'
       ]
     }
-  },
+  }
 }

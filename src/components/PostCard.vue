@@ -1,12 +1,12 @@
 <template>
   <div class="post-card content-box" :class="{'post-card--has-poster' : post.poster}">
     <div class="post-card__header">
-      <g-image alt="Cover image" v-if="post.coverImage" class="post-card__image" :src="post.coverImage"  width="860" blur="10" />
+      <g-image alt="Cover image" v-if="post.cover_image" class="post-card__image" :src="post.cover_image" />
     </div>
     <div class="post-card__content">
       <h2 class="post-card__title" v-html="post.title" />
       <p class="post-card__description" v-html="post.description" />
-      
+
       <PostMeta class="post-card__meta" :post="post" />
       <PostTags class="post-card__tags" :post="post" />
 
