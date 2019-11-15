@@ -16,10 +16,7 @@ pre {
 }
 
 code {
-  background-color: var(--bg-code);
-  border: 1px solid var(--border-color);
   font-size: .85em;
-  padding: .2em .5em;
 }
 
 code[class*="language-"],
@@ -57,7 +54,10 @@ pre[class*="language-"] {
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
+	background-color: var(--bg-code);
+	border: 1px solid var(--border-color);
 	border-radius: var(--radius);
+	padding: .2em .5em;
 	white-space: normal;
 }
 
@@ -101,7 +101,6 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string {
 	color: #9a6e3a;
-	background: hsla(0, 0%, 100%, .5);
 }
 
 .token.atrule,
