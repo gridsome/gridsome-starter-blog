@@ -10,7 +10,7 @@ module.exports = {
 
   templates: {
     Post: '/:title',
-    Tag: '/tag/:id'
+    Tag: '/tag/:title'
   },
 
   plugins: [
