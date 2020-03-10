@@ -15,7 +15,7 @@ body {
   line-height: 1.5;
 }
 
-a:not(.button) {
+a:not(.button):not(.post-tags__link) {
 	color: var(--link-color);
  	transition: opacity .2s;
 	&:hover {
