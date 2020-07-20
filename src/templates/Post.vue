@@ -79,6 +79,13 @@ query Post ($id: ID!) {
   text-align: center;
 }
 
+pre {
+  code {
+    background-color: transparent;
+    border: none;
+  }
+}
+
 .post {
 
   &__header {
