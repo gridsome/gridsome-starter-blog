@@ -1,0 +1,28 @@
+.pagination { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paging { 
+  text-decoration: none;
+  padding: 12px 16px;
+  border: 1px solid #adadad;
+  color: grey !important;
+  background-color: #fff;
+}
+
+.paging.active {
+  color: #fff !important;
+  background-color: #38b2ac;
+}
+
+.paging:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.paging:last-child { 
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
